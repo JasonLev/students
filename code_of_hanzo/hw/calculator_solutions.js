@@ -6,7 +6,7 @@
 function squareRoot(n) {
   var result = Math.sqrt(n);
   //Your code goes on the line below here
-
+  return result;
   //Your code goes on the line above
 }
 
@@ -20,7 +20,7 @@ squareRoot(144); //should output 12
 function addition(x,y) {
   var sum = x + y;
   //Your code goes on the line below here
-
+  return sum;
   //Your code goes on the line above
 }
 
@@ -33,8 +33,8 @@ addition(38, 21); //should output 59
 // You are given a little less this time, you should complete creating a variable to compute the math and then provide a way to get the ouput (hint: return) of the function
 function subtraction(x,y) {
   //Your code goes on the lines below here
-  var difference =            // <-- do the math here
-
+  var difference = x - y;         // <-- do the math here
+  return difference;
   //Your code goes on the lines above
 }
 
@@ -47,8 +47,8 @@ subtraction(38, 21); //should output 17
 // You are given even little less this time, you should create a variable to compute the math and then provide a way to get the ouput (hint: return) of the function
 function multiplication(x,y) {
   //Your code goes on the lines below here
-
-
+  var product = x*y;
+  return product;
   //Your code goes on the lines above
 }
 
@@ -60,12 +60,12 @@ multiplication(10, 17); //should output 170
 // this function should take two inputs (two numbers) and output the quotient of them;
 // You should complete the whole thing by writing the entire function out...
   //Your code goes on the lines below here
-
-
-
-
+function division(x,y) {
+  //Your code goes on the lines below here
+  var quotient = x/y;
+  return quotient;
   //Your code goes on the lines above
-
+}
 // Test the division function with this:
 division(540, 18); //should output 30
 
@@ -77,13 +77,12 @@ division(540, 18); //should output 30
 // this function should take two inputs (two numbers) and compute a mathematical operation on the inputs (either addition, subtraction, multiplication, or division), then the function continues by computing another operation on the inputs (don't repeat, pick a different operation), then the function computes yet another operation (again, different from the first two operations) and uses the results of the first operations as inputs
 // You should complete the whole thing by writing the entire function out...
   //Your code goes on the lines below here
-
-
-
-
-
-
+function mashUpMath(x,y) {
+  //Your code goes on the lines below here
+  var num = multiplication(addition(x,y),subtraction(x,y));
+  return num;
   //Your code goes on the lines above
+}
 
 // Test the division function with this:
 mashUpMath(10, 4); //if you pick addition, subtraction, and multiplication... should output 84
