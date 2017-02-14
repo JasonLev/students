@@ -42,3 +42,13 @@ footer {
 nav {
   position: fixed;
 }
+img#bCalc {
+  width: 360px;
+  height: 225px;
+}
+.display + ul {
+  display: none;
+}
+.hideContent {
+  margin-bottom: 20px;
+}
