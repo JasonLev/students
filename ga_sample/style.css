@@ -24,8 +24,36 @@ code {
   border-radius: 10px;
   padding: 20px;
   text-align: center;
+  color: #fff;
 }
 .easy {
   background-color: green;
-  color: #fff;
+}
+.moderate {
+  background-color: orange;
+}
+.hard {
+  background-color: red;
+}
+.easySection {
+  border: green 4px dotted;
+}
+.moderateSection {
+  border: orange 4px dotted;
+}
+.hardSection {
+  border: red 4px dotted;
+}
+.labDirections {
+  float: left;
+}
+iframe {
+  float: right;
+}
+.clearfix {
+  content: "";
+  clear: both;
+}
+.upcase {
+  text-transform: uppercase;
 }
