@@ -33,6 +33,16 @@ main {
 ul.no-bullet > li {
   list-style: none;
   text-align: left;
+  position: relative;
+  display: inline;
+}
+ul.no-bullet > li.resources {
+  display: block;
+  margin: 20px;
+}
+.weekHeading {
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
 }
 section {
   margin: 30px 0;
@@ -40,6 +50,7 @@ section {
   background-color: rgba(147,242,235,0.85);
   padding: 20px;
   box-shadow: 1px 1px 10px 4px;
+  overflow-y: scroll;
 }
 footer, .page-wrapper:after {
   height: 2em;
@@ -70,7 +81,12 @@ img#bCalc {
   width: 360px;
   height: 225px;
 }
-.display + ul {
+button + ul {
+  position: absolute;
+  top: 25px;
+  width: 400px;
+}
+.hide + ul {
   display: none;
 }
 .hideContent {
