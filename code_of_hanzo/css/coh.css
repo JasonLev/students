@@ -30,6 +30,9 @@ main {
   font-family: 'Rock Salt', cursive;
   text-align: center;
 }
+ul.no-bullet {
+  padding: 0;
+}
 ul.no-bullet > li {
   list-style: none;
   text-align: left;
@@ -50,7 +53,6 @@ section {
   background-color: rgba(147,242,235,0.85);
   padding: 20px;
   box-shadow: 1px 1px 10px 4px;
-  overflow-y: scroll;
 }
 footer, .page-wrapper:after {
   height: 2em;
@@ -81,12 +83,7 @@ img#bCalc {
   width: 360px;
   height: 225px;
 }
-button + ul {
-  position: absolute;
-  top: 25px;
-  width: 400px;
-}
-.hide + ul {
+ul.no-bullet > li.hide {
   display: none;
 }
 .hideContent {
