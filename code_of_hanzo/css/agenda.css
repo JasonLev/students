@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  background-color: silver;
+}
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-family: "Rock Salt", cursive;
+  font-size: 3em;
+}
+main {
+  width: 600px;
+  margin: 30px auto;
+}
+ul {
+  list-style: none;
+}
+li {
+  background-color: #fff;
+  border: 2px solid #000;
+  margin: 5px;
+  padding: 20px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+}
+input {
+  cursor: pointer;
+/*  position: relative;
+  bottom: 0.5em;*/
+  margin-left: 1em;
+}
+input + label {
+  /*display: inline;*/
+  margin: 0.5em;
+  font-size: 2em;
+}
+input:checked + label {
+  text-decoration: line-through;
+  color: rgba(0,0,0,0.15);
+}
