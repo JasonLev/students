@@ -37,7 +37,7 @@ ul.no-bullet > li {
   list-style: none;
   text-align: left;
   position: relative;
-  display: inline;
+  display: none;
 }
 ul.no-bullet > li.resources {
   display: block;
@@ -89,8 +89,8 @@ button {
 button:hover {
   transform: scale(1.25);
 }
-ul.no-bullet > li.hide {
-  display: none;
+ul.no-bullet > li:last-child {
+  display: list-item;
 }
 .hideContent {
   margin-bottom: 20px;

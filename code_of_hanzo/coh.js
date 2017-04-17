@@ -1,19 +1,19 @@
 $(function() {
   $("#notes > button").click(function() {
-    $(".topics").addClass('hide');
+    $(".topics").hide(400);
     var btnIndex = $(this).index('#notes > button');
-    $(".topics:eq("+btnIndex+")").removeClass('hide');
+    $(".topics:eq("+btnIndex+")").show(1000);
   });
 
   $("#hw > button").click(function() {
-    $(".homework").addClass('hide');
+    $(".homework").hide(400);
     var btnIndex = $(this).index('#hw > button');
-    $(".homework:eq("+btnIndex+")").removeClass('hide');
+    $(".homework:eq("+btnIndex+")").show(1000);
   });
 
   $("#exercises > button").click(function() {
-    $(".exc").addClass('hide');
+    $(".exc").hide(400);
     var btnIndex = $(this).index('#exercises > button');
-    $(".exc:eq("+btnIndex+")").removeClass('hide');
+    $(".exc:eq("+btnIndex+")").show(1000);
   });
 });
