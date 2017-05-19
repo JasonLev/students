@@ -54,6 +54,8 @@ function assignCell(element) {
 
 function gameStatus() {
   var board = document.querySelectorAll("td");
+  let boardArray = Array.from(board);
+
   if (
     //win via top row
       (board[0].textContent != "" &&
@@ -90,16 +92,7 @@ function gameStatus() {
     ) {
     document.querySelector('table').removeEventListener("click", assignCell);
     changeText("You win, ");
-  } else if (board[0].textContent != "" &&
-             board[1].textContent != "" &&
-             board[2].textContent != "" &&
-             board[3].textContent != "" &&
-             board[4].textContent != "" &&
-             board[5].textContent != "" &&
-             board[6].textContent != "" &&
-             board[7].textContent != "" &&
-             board[8].textContent != ""
-    ) {
+  } else if ( boardArray.every(cell => cell.textContent !== "")) {
     changeText("Stalemate!");
   } else {
     changeText("Your turn, ");
@@ -116,4 +109,3 @@ function reset() {
   changeText("Begin the game, ");
   document.querySelector('table').addEventListener("click", assignCell);
 }
-
