@@ -12,6 +12,7 @@ header {
 main {
   width: 600px;
   margin: 30px auto;
+  max-width: 100%;
 }
 ul {
   list-style: none;
@@ -46,4 +47,10 @@ input:checked + label {
 button {
   margin: 30px;
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  ul {
+    padding: 0;
+  }
 }
