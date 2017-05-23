@@ -79,7 +79,7 @@ img#hanzo {
   position: sticky;
   z-index: -1;
 }
-img#bCalc {
+img.thumbnail {
   width: 360px;
   height: 225px;
 }
