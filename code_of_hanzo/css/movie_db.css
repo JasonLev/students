@@ -38,6 +38,8 @@ button {
 @media (max-width: 565px) {
   input {
     font-size: 1.25em;
+    border: 3px blue dashed;
+    margin: 10px;
   }
   button {
     display: none;
