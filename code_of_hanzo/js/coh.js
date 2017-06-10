@@ -17,4 +17,13 @@ $(function() {
     var btnIndex = $(btnClicked).index(buttons);
     $(liClass+":eq("+btnIndex+")").show(1000);
   }
+  //change nav when scrolling
+  $(document).scroll(function () {
+    var $nav = $("nav");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $("img#hanzo").height() +
+                                                       $nav.parent().height() +
+                                                       parseInt($("main").css("margin-top")) +
+                                                       parseInt($("#notes").css("margin-top")) -
+                                                       8);
+  });
 });
