@@ -1,6 +1,6 @@
 $(function() {
-  $("#notes > button").click(function() {
-    slideUpThenShow('.topics', '#notes > button');
+  $("#agendas > button").click(function() {
+    slideUpThenShow('.topics', '#agendas > button');
   });
 
   $("#hw > button").click(function() {
@@ -23,7 +23,7 @@ $(function() {
     $nav.toggleClass('scrolled', $(this).scrollTop() > $("img#hanzo").height() +
                                                        $nav.parent().height() +
                                                        parseInt($("main").css("margin-top")) +
-                                                       parseInt($("#notes").css("margin-top")) -
+                                                       parseInt($("#agendas").css("margin-top")) -
                                                        8);
   });
 });
