@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+header {
+  color: silver;
+  background-color: black;
+  height: 60px;
+  border-bottom: green 2px dotted;
+  padding: 30px;
+  text-align: center;
+  font-size: 60px;
+}
+
+img {
+  margin: 50px 0 50px 50px;
+}
+
+main {
+  position: relative;
+}
+
+.hadouken{
+  position: absolute;
+  top: 180px;
+  margin: 0 -50px;
+}
