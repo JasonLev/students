@@ -90,6 +90,7 @@ button {
 }
 button:hover {
   transform: scale(1.25);
+  transition: all 200ms ease-in-out;
 }
 ul.no-bullet > li:last-child {
   display: list-item;

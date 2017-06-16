@@ -26,4 +26,17 @@ $(function() {
                                                        parseInt($("#agendas").css("margin-top")) -
                                                        8);
   });
+
+  // Smooth scroll
+  $('nav a').click(function(e) {
+
+    e.preventDefault();
+
+    var thisTarget = $(this).attr('href'),
+        targetOffset = $(thisTarget).offset().top;
+
+    $('body').animate({
+      scrollTop: targetOffset
+    }, 400);
+  });
 });
