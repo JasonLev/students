@@ -11,11 +11,21 @@ header {
   text-align: center;
   font-size: 60px;
 }
+.container {
+  background-image: url(http://cdn.playbuzz.com/cdn/4f027569-d451-43f0-b51b-db41e63a64af/9d180e8d-786e-4a91-ad0a-5074a68e358f_560_420.jpg);
+  background-size: cover;
+  min-height: 100vh;
+
+}
 form {
-  max-width: 100%;
-  width: 600px;
-  margin: 20px auto;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 30px;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+form h3 {
+  margin: inherit;
 }
 input {
   line-height: 2em;
@@ -38,6 +48,12 @@ button {
   border-radius: 5px; font-size: inherit;
   padding: .5em 1em;
   cursor: pointer;
+}
+main {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  min-height: 100vh;
+  padding: 5em;
 }
 .search {
   display: none;
