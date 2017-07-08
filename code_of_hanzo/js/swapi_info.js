@@ -12,8 +12,11 @@ $(function() {
                                     });
         $(".planetContainer").append(planetDiv);
       });
-      addButton();
-    });
+    }).then(
+      addButton)
+      .then(
+      $(".planetContainer").animate({ scrollTop: $(".planetContainer")[0].scrollHeight + 30 }, "slow")
+    );
   }
   function addButton() {
     var planetCount = $(".planet").length;

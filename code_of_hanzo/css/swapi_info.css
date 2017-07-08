@@ -14,12 +14,14 @@ header {
 .container {
   background-image: url(http://cdn.playbuzz.com/cdn/4f027569-d451-43f0-b51b-db41e63a64af/9d180e8d-786e-4a91-ad0a-5074a68e358f_560_420.jpg);
   background-size: cover;
-  min-height: 100vh;
+  min-height: 85vh;
   background-color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-h3 {
+section {
   width: 100%;
-  margin: 0 auto;
   text-align: center;
 }
 button {
@@ -38,16 +40,21 @@ button {
 }
 main {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.85);
-  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 5em;
+  flex-grow: 1;
+  text-align: center;
 }
 section,
 .planetContainer {
-  padding: 30px;
+  padding-top: 30px;
   background-color: rgba(255, 255, 255, 0.85);
+}
+.planetContainer {
   display: flex;
   flex-wrap: wrap;
+  flex-basis: 400px;
+  overflow-y: scroll;
 }
 .planet {
   cursor: pointer;
@@ -56,6 +63,9 @@ section,
   min-width: 40px;
   border: 2px solid black;
   margin: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 5%;
 }
 
 /*.search {

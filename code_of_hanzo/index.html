@@ -281,6 +281,7 @@
         <button>Week 24</button>
         <button>Week 25</button>
         <button>Week 26</button>
+        <button>Week 27</button>
         <ul class="no-bullet">
           <li class="homework">
             <h3 class="weekHeading">Week 1:</h3>
@@ -556,6 +557,67 @@
                 <ul>Start to learn about <code>git</code>. Use this resource:
                   <a href="https://git-scm.com/book/en/v2" target="_blank"><button>Pro Git book</button></a>
                   <li>Complete (read and do on your computer) the first chapter, "Getting Started".</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="homework">
+            <h3 class="weekHeading">Week 27:</h3>
+            <ul>
+              <li>Easy:
+                <ul>More practice with the Star Wars API exercise...
+                  <li>No need to submit a form anymore, just let the planet data (the names), appear as the page loads:
+                    <ul>
+                      <li>The GET request won't happen from <code>$("form").submit(...)</code>, instead, it will happen right away.</li>
+                      <li>You'll need to loop through the data response (I suggest using a <code>forEach</code> loop), to create an HTML element (I suggest a <code>div</code>) for each planet.</li>
+                      <li>
+                        What will you do with each planet during the loop?
+                        Set the text. Give it a class for styling purposes.
+                        Attach an event handler (this time use a "click" event) to set the text of "main" with the info of the planet.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Put some cool styling in there!  Practice your CSS skills!  Impress me!</li>
+                  <p>I trust you won't just copy my code, but if you get really really stuck, then use parts of my code to help you:</p>
+                  <a href="exercises/swapi_info.html" target="_blank">
+                    <button>Star Wars Api Info</button>
+                  </a>
+                </ul>
+              </li>
+              <li>Medium:
+                <ul>Even more practice with the Star Wars API exercise...
+                  <li>Notice how the API only provides 10 planets in the data response?!</li>
+                  <li>Create a function to add a button that calls and pulls in more planets.</li>
+                  <li>Implement this <code>addButton</code> function in a way that makes sense:
+                    <ul>
+                      <li>When does the button get created?  Where will the button be placed?</li>
+                      <li>
+                        What new API request will you need to make?
+                        (Hint: it is still a GET request, but the url is different.)
+                        How will the url be different?
+                      </li>
+                      <li>When will you make that API request?</li>
+                      <li>
+                        Extra bonus points: Do you want the button to be there if you've pulled in all the planets?
+                        No, so how do you make the button go away when you want it to go away?
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul>Hacking 101...
+                  <li>Read at least the first 5 chapters of
+                    <a href="http://krober.biz/wp-content/uploads/2017/03/web-hacking-101.pdf">this book.</a>
+                  </li>
+                  <li>
+                    Email me what you think or an analysis of what you read.
+                    Your email to me doesn't need to be long or formal, just tell me if you like the book and what it's about.
+                  </li>
+                </ul>
+              </li>
+              <li>Hard:
+                <ul>Start to learn about <code>git</code>. Use this resource:
+                  <a href="https://git-scm.com/book/en/v2" target="_blank"><button>Pro Git book</button></a>
+                  <li>Complete (read and do on your computer) the next two chapters (Chapters 2 &amp 3).</li>
                 </ul>
               </li>
             </ul>
