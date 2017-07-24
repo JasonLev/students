@@ -6,16 +6,17 @@ $(function() {
     $.get(urlPlanets, function (data) {
       data.results.forEach(function (planet) {
         var planetDiv = $("<div/>").text(planet.name)
-                                    .addClass("planet")
-                                    .click(function () {
+                                   .addClass("planet")
+                                   .click(function () {
                                       $("main").text("The planet of "+ planet["name"] + " is a very " + planet["climate"] + " place.")
                                     });
         $(".planetContainer").append(planetDiv);
       });
     }).then(
-      addButton)
+        addButton)
+        //set the scroll position to showcase the addButton:
       .then(
-      $(".planetContainer").animate({ scrollTop: $(".planetContainer")[0].scrollHeight + 30 }, "slow")
+        $(".planetContainer").animate({ scrollTop: $(".planetContainer")[0].scrollHeight + 30 }, "slow")
     );
   }
   function addButton() {
