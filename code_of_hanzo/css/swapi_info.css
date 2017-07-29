@@ -24,7 +24,7 @@ section {
   width: 100%;
   text-align: center;
 }
-button {
+.addBtn {
   width: 200px;
   margin: 20px;
   line-height: 2em;
@@ -66,27 +66,13 @@ section,
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   border-radius: 5%;
+  position: relative;
 }
-
-/*.search {
-  display: none;
+.removeBtn {
+  cursor: inherit;
+  color: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #000;
 }
-@media (max-width: 565px) {
-  input {
-    font-size: 1.25em;
-    border: 3px blue dashed;
-    margin: 10px;
-  }
-  button {
-    display: none;
-  }
-  .search {
-    display: inline;
-    position: relative;
-    top: 20px;
-    width: 50px;
-  }
-  #searchMag {
-    width: inherit;
-  }
-}*/
