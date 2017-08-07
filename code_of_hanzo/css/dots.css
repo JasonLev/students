@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 20px;
+}
+div {
+  margin: 20px auto;
+  width: 150px;
+}
+.dot{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}

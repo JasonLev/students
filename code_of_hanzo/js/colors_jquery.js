@@ -1,4 +1,5 @@
-$(){
-  console.log(document.querySelector("input").value);
-  console.log(document.querySelector("body").style);
-}
+$(function(){
+  $('input').change(function() {
+    $('body').css('backgroundColor', $(this).val());
+  })
+});
