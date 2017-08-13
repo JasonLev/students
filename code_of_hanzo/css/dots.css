@@ -11,6 +11,7 @@ div {
   height: 50px;
   border-radius: 50%;
   border: 1px solid #000;
+  position: absolute;
 }
 #changeDots {
   border-radius: 10px;
