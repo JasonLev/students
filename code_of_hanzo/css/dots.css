@@ -4,11 +4,16 @@ body {
 }
 div {
   margin: 20px auto;
-  width: 150px;
+  text-align: center;
 }
 .dot{
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: 1px solid #000;
+  position: absolute;
+}
+#changeDots {
+  border-radius: 10px;
+  /*width: 150px;*/
 }
