@@ -17,3 +17,7 @@ div {
   border-radius: 10px;
   /*width: 150px;*/
 }
+label {
+  margin-top: 1em;
+  display: block;
+}

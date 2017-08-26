@@ -14,6 +14,17 @@
   <div>
     <label for="colorPicker">Select a color: </label>
     <input type="color" name="colorPicker">
+    <label for="colorPicker">Select a speed: </label>
+    <input type="range" id="slider" min="500" max="3500" step="500" list="tickmarks">
+    <datalist id="tickmarks">
+      <option value="500"></option>
+      <option value="1000"></option>
+      <option value="1500"></option>
+      <option value="2000"></option>
+      <option value="2500"></option>
+      <option value="3000"></option>
+      <option value="3500"></option>
+    </datalist>
   </div>
   <div class="dotBtns">
     <button id="createDot">Start the dots!</button>

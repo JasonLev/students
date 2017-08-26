@@ -1,19 +1,25 @@
 var body = document.querySelector("body");
 var picker = document.querySelector("input");
 var dotBtn = document.querySelector("#createDot");
-
-// "colors" exercise to change body backgroundColor when new color is picked:
-// picker.addEventListener("change", function() {
-//   // alert("the input changed!");
-//   var colorSelected = document.querySelector("input").value
-//   // console.log(colorSelected);
-//   body.style.backgroundColor = colorSelected;
-// });
+var slider = document.querySelector('#slider');
+var dotStatus = true;
+var dotIntervalID;
 
 dotBtn.addEventListener("click", function () {
+  if (dotStatus){
+    dotBtn.textContent = "Stop the dots!";
+    dotIntervalID = setInterval(createDot, slider.value);
+  } else {
+    dotBtn.textContent = "Start the dots!";
+    clearInterval(dotIntervalID);
+  }
+  dotStatus = !dotStatus;
+});
+
+function createDot() {
   var newDot = document.createElement('div');
   //randomly set the "top" property
-  var top = Math.floor(Math.random() * (window.innerHeight - 205) + 125);
+  var top = Math.floor(Math.random() * (window.innerHeight - 305) + 200);
   var left = Math.floor(Math.random() * (window.innerWidth - 75) + 25);
   newDot.classList.add('dot');
   newDot.style.backgroundColor = picker.value;
@@ -25,7 +31,7 @@ dotBtn.addEventListener("click", function () {
     checkForDots();
   })
   checkForDots();
-})
+}
 function checkForDots() {
   if (document.querySelector('.dot')) {
     if (!document.querySelector('#changeDots')) {
