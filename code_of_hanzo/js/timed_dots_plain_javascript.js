@@ -1,14 +1,15 @@
 var body = document.querySelector("body");
-var picker = document.querySelector("input");
+var picker = document.querySelector("#colorPicker");
 var dotBtn = document.querySelector("#createDot");
-var slider = document.querySelector('#slider');
+var speed = document.querySelector('#slider');
+var size = document.querySelector('#sizePicker');
 var dotStatus = true;
 var dotIntervalID;
 
 dotBtn.addEventListener("click", function () {
   if (dotStatus){
     dotBtn.textContent = "Stop the dots!";
-    dotIntervalID = setInterval(createDot, slider.value);
+    dotIntervalID = setInterval(createDot, speed.value);
   } else {
     dotBtn.textContent = "Start the dots!";
     clearInterval(dotIntervalID);
@@ -25,6 +26,8 @@ function createDot() {
   newDot.style.backgroundColor = picker.value;
   newDot.style.top = top + "px";
   newDot.style.left = left + "px";
+  newDot.style.width = size.value + "px";
+  newDot.style.height = size.value + "px";
   body.appendChild(newDot);
   newDot.addEventListener("click", function () {
     this.remove();

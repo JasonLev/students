@@ -1,6 +1,15 @@
 $(function(){
+  var dotIntervalID,
+      dotStatus = true;
   $('#createDot').click(function() {
-    createDot();
+    if (dotStatus) {
+      dotIntervalID = setInterval(createDot, $('#slider').val());
+      $("#createDot").text("Stop dots!");
+    } else {
+      clearInterval(dotIntervalID);
+      $("#createDot").text("Start dots!");
+    }
+    dotStatus = !dotStatus;
   });
 
   function createDot() {
@@ -12,6 +21,8 @@ $(function(){
       },
       css: {
         backgroundColor: $('input').val(),
+        width: $('#sizePicker').val(),
+        height: $('#sizePicker').val(),
         top: Math.floor(Math.random() * (window.innerHeight - 305) + 200),
         left: Math.floor(Math.random() * (window.innerWidth - 75) + 25)
       },
