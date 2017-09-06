@@ -20,7 +20,7 @@ $(function(){
         checkForDots();
       },
       css: {
-        backgroundColor: $('input').val(),
+        backgroundColor: $('#colorPicker').val(),
         width: $('#sizePicker').val(),
         height: $('#sizePicker').val(),
         top: Math.floor(Math.random() * (window.innerHeight - 305) + 200),
