@@ -13,6 +13,15 @@ $(function(){
   });
 
   function createDot() {
+    var autoCheck;
+    if ($("input:checked").length) {
+      var redVal = Math.floor(Math.random()* 255)
+      var greenVal = Math.floor(Math.random()* 255);
+      var blueVal = Math.floor(Math.random()* 255);
+      autoCheck = "rgb(" + redVal + "," + greenVal + "," + blueVal + ")";
+    } else {
+      autoCheck = $('#colorPicker').val();
+    }
     var $dot = $("<div/>",{
       "class": "dot",
       click: function () {
@@ -20,7 +29,7 @@ $(function(){
         checkForDots();
       },
       css: {
-        backgroundColor: $('#colorPicker').val(),
+        backgroundColor: autoCheck,
         width: $('#sizePicker').val(),
         height: $('#sizePicker').val(),
         top: Math.floor(Math.random() * (window.innerHeight - 305) + 200),

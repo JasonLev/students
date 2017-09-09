@@ -1,6 +1,9 @@
 body {
   margin: 0;
-  padding: 20px;
+  text-align: center;
+}
+section {
+  margin: 20px;
 }
 div {
   margin: 20px auto;
@@ -20,4 +23,12 @@ div {
 label {
   margin-top: 1em;
   display: block;
+}
+.colorInput {
+  display: flex;
+  background-color: rgb(163, 175, 186);
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
 }

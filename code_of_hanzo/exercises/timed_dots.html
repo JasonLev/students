@@ -11,12 +11,20 @@
 </head>
 
 <body>
-  <div>
-    <label for="colorPicker">Select a color: </label>
-    <input type="color" id="colorPicker" name="colorPicker">
-    <label for="slider">Select a speed: </label>
-    <input type="range" id="slider" min="500" max="3500" step="500" list="tickmarks">
-    <datalist id="tickmarks">
+  <div class="colorInput">
+    <section>
+      <label for="colorPicker">Select a color: </label>
+      <input type="color" id="colorPicker" name="colorPicker">
+    </section>
+    <span>OR</span>
+    <section>
+      <label for="autoColor">Check automatic color:</label>
+      <input type="checkbox" id="autoColor" name="autoColor">
+    </section>
+  </div>
+  <label for="slider">Select a speed: </label>
+  <input type="range" id="slider" min="500" max="3500" step="500" list="tickmarks">
+  <datalist id="tickmarks">
       <option value="500"></option>
       <option value="1000"></option>
       <option value="1500"></option>
@@ -25,9 +33,9 @@
       <option value="3000"></option>
       <option value="3500"></option>
     </datalist>
-    <label for="sizePicker">Select a size: </label>
-    <input type="range" id="sizePicker" value="50" min="0" max="300" step="50" list="sizeOptions">
-    <datalist id="sizeOptions">
+  <label for="sizePicker">Select a size: </label>
+  <input type="range" id="sizePicker" value="50" min="0" max="300" step="50" list="sizeOptions">
+  <datalist id="sizeOptions">
       <option value="0"></option>
       <option value="50"></option>
       <option value="100"></option>
@@ -36,7 +44,6 @@
       <option value="250"></option>
       <option value="300"></option>
     </datalist>
-  </div>
   <div class="dotBtns">
     <button id="createDot">Start the dots!</button>
   </div>
