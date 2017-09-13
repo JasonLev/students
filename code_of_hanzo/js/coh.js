@@ -1,6 +1,6 @@
 $(function() {
   $("#agendas > button").click(function() {
-    slideUpThenShow('.topics', '#agendas > button');
+    slideUpThenShow('.agendas', '#agendaSection > button');
   });
 
   $("#hw > button").click(function() {
@@ -8,7 +8,7 @@ $(function() {
   });
 
   $("#exercises > button").click(function() {
-    slideUpThenShow('.exc', '#exercises > button');
+    slideUpThenShow('.topics', '#topicsExercises > button');
   });
 
   function slideUpThenShow(liClass, buttons) {
@@ -23,7 +23,7 @@ $(function() {
     $nav.toggleClass('scrolled', $(this).scrollTop() > $("img#hanzo").height() +
                                                        $nav.parent().height() +
                                                        parseInt($("main").css("margin-top")) +
-                                                       parseInt($("#agendas").css("margin-top")) -
+                                                       parseInt($("#agendaSection").css("margin-top")) -
                                                        8);
   });
 
