@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +10,18 @@
     body {
       background-color: rgb(208, 208, 215);
     }
+
     header {
       text-align: center;
     }
+
     section {
       margin: 5px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
+
     .coordinate {
       width: 40px;
       height: 1.2em;
@@ -25,17 +29,32 @@
       background-color: #fff;
       margin: 5px;
     }
+
     main {
       width: 100%;
       height: 90vh;
+      cursor: pointer;
+    }
+
+    .dot {
+      height: 50px;
+      width: 50px;
+      border: 1px #000 solid;
+      position: absolute;
+      border-radius: 50%;
     }
   </style>
 </head>
+
 <body>
   <header>
     <div>
       <label for="colorPicker">Pick a color:</label>
       <input type="color" id="colorPicker">
+    </div>
+    <div>
+      <label for="eraserCheckbox">Eraser mode:</label>
+      <input type="checkbox" id="eraserCheckbox">
     </div>
     <section>
       <div>PageX: </div>
@@ -47,10 +66,28 @@
   <main>
   </main>
   <script type="text/javascript">
-    document.querySelector('main').addEventListener("mousemove", function (event) {
+    var main = document.querySelector('main');
+    main.addEventListener("mousemove", function(event) {
       document.querySelector('#pageX').textContent = event.clientX;
       document.querySelector('#pageY').textContent = event.clientY;
-    })
+    });
+    main.addEventListener("click", checkDotAndEraser);
+    function checkDotAndEraser(e) {
+      if (e.target.tagName === "DIV" && document.querySelector('input:checked')) {
+        e.target.remove();
+      } else {
+        createDot(e);
+      }
+    }
+    function createDot(e) {
+      var paintedDot = document.createElement('div');
+      paintedDot.classList.add('dot');
+      paintedDot.style.backgroundColor = document.querySelector('#colorPicker').value;
+      paintedDot.style.top = e.clientY - 25 + "px";
+      paintedDot.style.left = e.clientX - 25 + "px";
+      main.appendChild(paintedDot);
+    };
   </script>
 </body>
+
 </html>
