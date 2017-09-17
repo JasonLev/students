@@ -37,8 +37,6 @@
     }
 
     .dot {
-      height: 50px;
-      width: 50px;
       border: 1px #000 solid;
       position: absolute;
       border-radius: 50%;
@@ -67,26 +65,45 @@
   </main>
   <script type="text/javascript">
     var main = document.querySelector('main');
+    var dotInterval,
+        diameter = 15;
     main.addEventListener("mousemove", function(event) {
       document.querySelector('#pageX').textContent = event.clientX;
       document.querySelector('#pageY').textContent = event.clientY;
     });
-    main.addEventListener("click", checkDotAndEraser);
+    main.addEventListener("mousedown", checkDotAndEraser);
     function checkDotAndEraser(e) {
       if (e.target.tagName === "DIV" && document.querySelector('input:checked')) {
         e.target.remove();
       } else {
-        createDot(e);
+        var dotPress = [];
+        dotInterval = setInterval(function () {
+          diameter += 10;
+          var dot = createDot(e, diameter);
+          dotPress.push(dot);
+          if (dotPress.length > 1) {
+            for (var i = 0; i < dotPress.length - 1; i++) {
+              dotPress[i].remove();
+            }
+          }
+        }, 100);
       }
     }
-    function createDot(e) {
+    function createDot(e, diameter) {
       var paintedDot = document.createElement('div');
       paintedDot.classList.add('dot');
       paintedDot.style.backgroundColor = document.querySelector('#colorPicker').value;
-      paintedDot.style.top = e.clientY - 25 + "px";
-      paintedDot.style.left = e.clientX - 25 + "px";
+      paintedDot.style.height = diameter + "px";
+      paintedDot.style.width = diameter + "px";
+      paintedDot.style.top = e.clientY - diameter/2 + "px";
+      paintedDot.style.left = e.clientX - diameter/2 + "px";
       main.appendChild(paintedDot);
+      return paintedDot;
     };
+    document.body.addEventListener("mouseup", function () {
+      clearInterval(dotInterval);
+      diameter = 15;
+    });
   </script>
 </body>
 
