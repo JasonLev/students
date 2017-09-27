@@ -84,14 +84,14 @@ img#hanzo {
   position: sticky;
   z-index: -1;
 }
-img.thumbnail {
+img.thumbnail, img.screenShot {
   width: 360px;
   height: 225px;
 }
 button {
   margin: 2px 4px;
 }
-button:hover {
+button:hover, img.screenShot:hover {
   transform: scale(1.25);
   transition: all 200ms ease-in-out;
 }
