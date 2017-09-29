@@ -19,7 +19,7 @@ function addTodo(event) {
       var span = document.createElement("span");
       //setup the checkbox and span content
       checkbox.setAttribute("type", "checkbox");
-      span.textContent = item;
+      span.textContent = item.trim();
       // append the elements to the DOM
       label.appendChild(checkbox);
       label.appendChild(span);
