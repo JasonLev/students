@@ -1,5 +1,5 @@
 $(function() {
-  $("#agendas > button").click(function() {
+  $("#agendaSection > button").click(function() {
     slideUpThenShow('.agendas', '#agendaSection > button');
   });
 
@@ -7,7 +7,7 @@ $(function() {
     slideUpThenShow('.homework', '#hw > button');
   });
 
-  $("#exercises > button").click(function() {
+  $("#topicsExercises > button").click(function() {
     slideUpThenShow('.topics', '#topicsExercises > button');
   });
 
