@@ -31,12 +31,11 @@ $(function() {
   $('nav a').click(function(e) {
 
     e.preventDefault();
-
     var thisTarget = $(this).attr('href'),
         targetOffset = $(thisTarget).offset().top;
 
-    $('body').animate({
+    $('html, body').animate({
       scrollTop: targetOffset
-    }, 400);
+    }, 400 );
   });
 });
