@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Painting with Growing Dots</title>
+  <style media="screen">
+    body {
+      background-color: rgb(208, 208, 215);
+    }
+
+    header {
+      text-align: center;
+    }
+
+    section {
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .coordinate {
+      width: 40px;
+      height: 1.2em;
+      border: 1px solid #000;
+      background-color: #fff;
+      margin: 5px;
+    }
+
+    main {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      cursor: pointer;
+      overflow-y: hidden;
+    }
+
+    .dot {
+      border: 1px #000 solid;
+      position: absolute;
+      border-radius: 50%;
+      /*z-index: -1;*/
+    }
+  </style>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div>
+      <label for="colorPicker">Pick a color:</label>
+      <input type="color" id="colorPicker">
+    </div>
+    <div>
+      <label for="eraserCheckbox">Eraser mode:</label>
+      <input type="checkbox" id="eraserCheckbox">
+    </div>
+    <section>
+      <div>PageX: </div>
+      <div id="pageX" class="coordinate"></div>
+      <div>PageY: </div>
+      <div id="pageY" class="coordinate"></div>
+    </section>
+  </header>
+  <main>
+  </main>
+  <script type="text/javascript">
+    var $main = $('main');
+    var dotInterval,
+        diameter = 15;
+    $main.mousemove(function(event) {
+      $('#pageX').text(event.pageX);
+      $('#pageY').text(event.pageY);
+    });
+    $main.mousedown(checkDotAndEraser);
+    function checkDotAndEraser(event) {
+      if ($('#eraserCheckbox').is(":checked") && $(event.target).attr("class") === 'dot') {
+        $(event.target).remove();
+      } else {
+        var dot;
+        dotInterval = setInterval(function () {
+          diameter += 10;
+          if (dot) {
+            dot.remove();
+          }
+          dot = createDot(event, diameter);
+          $main.append(dot);
+        }, 100);
+      }
+    }
+    function createDot(e, diameter) {
+      var paintedDot = $('<div/>', {
+        "class": "dot",
+        css: {
+          backgroundColor: $('#colorPicker').val(),
+          height: diameter + "px",
+          width: diameter + "px",
+          top: e.pageY - diameter/2 - 8 - $('header').height() + "px",
+          left: e.pageX - diameter/2 - 5 + "px"
+        }
+      });
+      return paintedDot;
+    };
+    $('body').mouseup(function () {
+      clearInterval(dotInterval);
+      diameter = 15;
+    });
+  </script>
+</body>
+
+</html>

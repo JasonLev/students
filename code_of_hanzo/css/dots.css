@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+section {
+  margin: 20px;
+}
+div {
+  margin: 20px auto;
+  text-align: center;
+}
+.dot{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: absolute;
+}
+#changeDots {
+  border-radius: 10px;
+  /*width: 150px;*/
+}
+label {
+  margin-top: 1em;
+  display: block;
+}
+.colorInput {
+  display: flex;
+  background-color: rgb(163, 175, 186);
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+}

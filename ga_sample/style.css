@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+}
+header {
+  font-size: 3em;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 30px;
+}
+main {
+  margin-left: 80px;
+}
+section {
+  background-color: lightgrey;
+  padding: 30px;
+}
+code {
+  display: block;
+}
+.labLabel {
+  width: 100px;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+.easy {
+  background-color: green;
+}
+.moderate {
+  background-color: orange;
+}
+.hard {
+  background-color: red;
+}
+.easySection {
+  border: green 4px dotted;
+}
+.moderateSection {
+  border: orange 4px dotted;
+}
+.hardSection {
+  border: red 4px dotted;
+}
+.labDirections {
+  float: left;
+}
+iframe {
+  float: right;
+}
+.clearfix {
+  content: "";
+  clear: both;
+}
+.upcase {
+  text-transform: uppercase;
+}

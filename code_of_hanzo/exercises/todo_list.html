@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="../css/todo_list.css">
+</head>
+
+<body>
+  <header>
+    <h1>Jason's Todos:</h1>
+  </header>
+  <main>
+    <form id="todoForm">
+      <input type="text" id="newTodo" placeholder="What do you need to do?">
+      <button type="submit">Create Todo</button>
+    </form>
+
+    <ul id="todoList">
+      <!-- use this as a guide:
+    <li>
+      <label>
+        <input type="checkbox">
+        <span>Grocery shopping</span>
+      </label>
+    </li>
+    -->
+      <div id="emptyList">No tasks, yet.</div>
+    </ul>
+    <div class="counters">
+      <div class="counter">Total: <span id="total">0</span></div>
+      <div class="counter">Completed: <span id="completed">0</span></div>
+      <div class="counter">Remaining: <span id="remaining">0</span></div>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../js/todo_list_jquery.js"></script>
+  <!-- <script type="text/javascript" src="../js/todo_list.js"></script> -->
+</body>
+
+</html>

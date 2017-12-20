@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+}
+
+header {
+  color: silver;
+  background-color: black;
+  height: 60px;
+  border-bottom: green 2px dotted;
+  padding: 30px;
+  text-align: center;
+  font-size: 60px;
+}
+#scoreBoard{
+  text-align: center;
+  font-size: 2em;
+  color: silver;
+  background-color: #000;
+  padding: 0.5em;
+}
+#player1Containter {
+  float: left;
+}
+#player2Containter {
+  float: right;
+}
+#player1Containter, #player2Containter {
+  margin: 80px;
+}
+
+td {
+  height: 175px;
+  width: 175px;
+  border: black 2px solid;
+  text-align: center;
+  font-size: 40px;
+}
+
+table {
+  width: 600px;
+  height: 600px;
+  margin: 50px auto;
+}
+
+.player1 {
+  background-color: blue;
+  color: #fff;
+}
+.player2 {
+  background-color: green;
+  color: #fff;
+}
+.player1:hover, .player2:hover {
+  transform: scale(1.1);
+  font-size: 6em;
+}
+.player1, .player2 {
+  font-size: 5em;
+}
+
+.clearFix {
+  clear: both;
+}
+button {
+  width: 200px;
+  margin: 20px auto;
+  line-height: 2em;
+  font-size: 2em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+}

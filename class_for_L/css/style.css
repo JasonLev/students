@@ -40,7 +40,6 @@ footer {
 nav {
   position: fixed;
 }
-
-.strike {
-  text-decoration: line-through;
+.mt20 {
+  margin-top: 20px;
 }
