@@ -66,6 +66,9 @@
         <button>Week 40</button>
         <button>Week 41</button>
         <button>Week 42</button>
+        <button>Week 43</button>
+        <button>Week 44</button>
+        <button>Week 45</button>
         <ul class="no-bullet">
           <li class="agendas">
             <h3 class="weekHeading">Week 1</h3>
@@ -355,6 +358,24 @@
               <li>See agenda for <a href="agendas/wk42.html" target="_blank"><button>Week 42</button></a></li>
             </ul>
           </li>
+          <li class="agendas">
+            <h3 class="weekHeading">Week 43</h3>
+            <ul>
+              <li>See agenda for <a href="agendas/wk43.html" target="_blank"><button>Week 43</button></a></li>
+            </ul>
+          </li>
+          <li class="agendas">
+            <h3 class="weekHeading">Week 44</h3>
+            <ul>
+              <li>See agenda for <a href="agendas/wk44.html" target="_blank"><button>Week 44</button></a></li>
+            </ul>
+          </li>
+          <li class="agendas">
+            <h3 class="weekHeading">Week 45</h3>
+            <ul>
+              <li>See agenda for <a href="agendas/wk45.html" target="_blank"><button>Week 45</button></a></li>
+            </ul>
+          </li>
         </ul>
       </section>
       <section id="hw">
@@ -400,6 +421,10 @@
         <button>Week 39</button>
         <button>Week 40</button>
         <button>Week 41</button>
+        <button>Week 42</button>
+        <button>Week 43</button>
+        <button>Week 44</button>
+        <button>Week 45</button>
         <ul class="no-bullet">
           <li class="homework">
             <h3 class="weekHeading">Week 1:</h3>
@@ -734,7 +759,7 @@
               <li>Hard:
                 <ul>Start to learn about <code>git</code>. Use this resource:
                   <a href="https://git-scm.com/book/en/v2" target="_blank"><button>Pro Git book</button></a>
-                  <li>Complete (read and do on your computer) the next two chapters (Chapters 2 &amp 3).</li>
+                  <li>Complete (read and do on your computer) the next two chapters (Chapters 2 &amp; 3).</li>
                 </ul>
               </li>
             </ul>
@@ -853,8 +878,7 @@
                   <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval" target="_blank"><code>setInterval</code></a>!
                 </p>
                 <p>
-                  Duplicate your <code>dots</code> files as started code for a new set of files (html file, js file of plain javascript, js file of jQuery).
-                  Call these new files <a href="exercises/timed_dots.html" target="_blank"><button><code>timed_dots</code></button></a>.
+                  Duplicate your <code>dots</code> files as started code for a new set of files (html file, js file of plain javascript, js file of jQuery). Call these new files <a href="exercises/timed_dots.html" target="_blank"><button><code>timed_dots</code></button></a>.
                 </p>
                 <ul>With <strong>plain javascript</strong> in your <code>timed_dots</code> exercise...
                   <li>Create a button that will continually add dots when you click on it.</li>
@@ -932,8 +956,8 @@
                 <p>Keep working on <a href="exercises/timed_dots.html" target="_blank"><button><code>timed_dots</code></button></a> assignment using jQuery:</p>
                 <ul>
                   <li>
-                    Create an input checkbox, which if selected, will deactivate the color picker actions and instead automatically set the color of the dots as they appear.
-                    That is, a user clicks the checkbox and clicks the "Start dots" button, then dots appear one at a time of a changed color, first maybe blue, then maybe purple, then maybe red, etc.
+                    Create an input checkbox, which if selected, will deactivate the color picker actions and instead automatically set the color of the dots as they appear. That is, a user clicks the checkbox and clicks the "Start dots" button, then dots appear one at a
+                    time of a changed color, first maybe blue, then maybe purple, then maybe red, etc.
                   </li>
                 </ul>
               </li>
@@ -953,9 +977,8 @@
                 <p>Use this starter code: <a href="exercises/paint_dots_starter.html" target="_blank"><button><code>paint_dots</code></button></a></p>
                 <ul>
                   <li>
-                    Currently, there is an event listener for a <code>mousemove</code> on the <code>main</code> elment.
-                    Add another event listener on the <code>main</code> element, but this time a click.
-                    The function for that click should then create a dot in that location.
+                    Currently, there is an event listener for a <code>mousemove</code> on the <code>main</code> elment. Add another event listener on the <code>main</code> element, but this time a click. The function for that click should then create
+                    a dot in that location.
                   </li>
                   <li>Keep in mind that if you want the <strong>center</strong> of the dot to have the correct coordinates, then you need to postion the dot by including the dot radius.</li>
                   <li>Let's keep all our dots uniform and make the dots 50px by 50px</li>
@@ -967,7 +990,7 @@
                 <ul>
                   <li>If you did the Easy assignment above with plain javascript, then duplicate the file and try jQuery.</li>
                   <li>If you did the Easy assignment above with jQuery, then duplicate the file and try plain javascript.</li>
-                  <li>Include a checkbox to toggle an "Erase mode" so that, if checked, the user can click to erase dots instead of create dots.  Include this functionality (hint: you can start with a conditional statement).</li>
+                  <li>Include a checkbox to toggle an "Erase mode" so that, if checked, the user can click to erase dots instead of create dots. Include this functionality (hint: you can start with a conditional statement).</li>
                 </ul>
               </li>
             </ul>
@@ -989,10 +1012,10 @@
               <li>Medium:
                 <p>More work with your <code>paint_grow_dots</code> assignment...</p>
                 <ul>
-                  <li>Include a checkbox to toggle an "Erase mode" so that, if checked, the user can click to erase dots instead of create dots.  Include this functionality (hint: you can start with a conditional statement).</li>
+                  <li>Include a checkbox to toggle an "Erase mode" so that, if checked, the user can click to erase dots instead of create dots. Include this functionality (hint: you can start with a conditional statement).</li>
                   <li>
-                    Change your function that creates dots to erase the previous dot that might be beneath it (if you are stacking them as you create larger dots).
-                    In this way, you'll only have one dot created after the complete mousedown then mouseup sequence (instead of a stack of dots from the sequence).
+                    Change your function that creates dots to erase the previous dot that might be beneath it (if you are stacking them as you create larger dots). In this way, you'll only have one dot created after the complete mousedown then mouseup sequence (instead of
+                    a stack of dots from the sequence).
                   </li>
                 </ul>
               </li>
@@ -1018,8 +1041,7 @@
                   <li>Try to create the <code>HTML</code> and <code>CSS</code> to match this:</li>
                   <img src="img/todo_list_screenshot.png" alt="todo list screenshot" class="screenShot">
                   <li>
-                    Get as far as you can with the javascript to make it functional.
-                    At the very least, if you create an item, then it will append to the bottom of the list.
+                    Get as far as you can with the javascript to make it functional. At the very least, if you create an item, then it will append to the bottom of the list.
                   </li>
                 </ul>
               </li>
@@ -1132,6 +1154,38 @@
               <li>Plan the video and application</li>
             </ul>
           </li>
+          <li class="homework">
+            <h3 class="weekHeading">Week 42:</h3>
+            <ul>Website Project:
+              <li>Design and build the layout of the sections.</li>
+            </ul>
+            <ul>Internship Application:
+              <li>Finish the video and application.</li>
+            </ul>
+          </li>
+          <li class="homework">
+            <h3 class="weekHeading">Week 43:</h3>
+            <ul>Website Project:
+              <li>To improve the RSVP form, inspect code from other forms on the internet. Primarily, use the Xfinity form as a guide.</li>
+            </ul>
+          </li>
+          <li class="homework">
+            <h3 class="weekHeading">Week 44:</h3>
+            <ul>Forms Exercise:
+              <li>Include UI and UX to match this work:
+                <a href="https://jasonlev.github.io/form-exercise/">Form Exercise</a>
+              </li>
+            </ul>
+          </li>
+          <li class="homework">
+            <h3 class="weekHeading">Week 45:</h3>
+            <ul>Workflow practice:
+              <li>Make 2 PRs (pull requests) on the website project (the wedding repo)</li>
+              <li>Make 1 issue on the website project (the wedding repo)</li>
+              <li>Make 2 PRs (pull requests) on the forms-exercise (the forms-exercise repo)</li>
+              <li>Make 1 issue on the forms-exercise (the forms-exercise repo)</li>
+            </ul>
+          </li>
         </ul>
       </section>
       <section id="topicsExercises">
@@ -1177,6 +1231,10 @@
         <button>Week 39</button>
         <button>Week 40</button>
         <button>Week 41</button>
+        <button>Week 42</button>
+        <button>Week 43</button>
+        <button>Week 44</button>
+        <button>Week 45</button>
         <ul class="no-bullet">
           <li class="topics">
             <h3 class="weekHeading">Week 1:</h3>
@@ -1263,7 +1321,8 @@
             <ul>
               <li>Continue to use Chrome's JavaScript Console Developer Tool to practice with <code>document</code> and the elements using <code>document.querySelector()</code></li>
               <li>Use <code>basic_calculator.html</code> file get the addition button to work. You'll need the values of the inputs, you'll need a function to add them, and within the function you'll need to set/assign the sum as the textContent to the Answer
-                div.</li>
+                div.
+              </li>
             </ul>
           </li>
           <li class="topics">
@@ -1413,7 +1472,8 @@
             <ul>
               <li>Compare and contrast js vs. jQuery</li>
               <li>Compare <code>.fetch()</code> vs. <code>$.get()</code></li>
-              <li>Examples of <code>Math.random()</code> to generate random numbers</code></li>
+              <li>Examples of <code>Math.random()</code> to generate random numbers</code>
+              </li>
             </ul>
           </li>
           <li class="topics">
@@ -1491,6 +1551,32 @@
             <h3 class="weekHeading">Week 41:</h3>
             <ul>
               <li>Navbar approaches</li>
+            </ul>
+          </li>
+          <li class="topics">
+            <h3 class="weekHeading">Week 42:</h3>
+            <ul>
+              <li>Web Design: Page Layout and SPA (single page application)</li>
+            </ul>
+          </li>
+          <li class="topics">
+            <h3 class="weekHeading">Week 43:</h3>
+            <ul>
+              <li>Intro to UI/UX in forms</li>
+            </ul>
+          </li>
+          <li class="topics">
+            <h3 class="weekHeading">Week 44:</h3>
+            <ul>
+              <li>Code Collaboration Techniques and Tools</li>
+              <li>Net Neutrality</li>
+            </ul>
+          </li>
+          <li class="topics">
+            <h3 class="weekHeading">Week 45:</h3>
+            <ul>
+              <li>Git and Github workflow</li>
+              <li>More UI (and UX) for forms practice</li>
             </ul>
           </li>
         </ul>
