@@ -7,8 +7,8 @@ $(function() {
     slideUpThenShow('.homework', '#hw > button');
   });
 
-  $("#topicsExercises > button").click(function() {
-    slideUpThenShow('.topics', '#topicsExercises > button');
+  $("#topicsSection > button").click(function() {
+    slideUpThenShow('.topics', '#topicsSection > button');
   });
 
   function slideUpThenShow(liClass, buttons) {
