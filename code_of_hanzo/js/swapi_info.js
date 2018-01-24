@@ -2,8 +2,17 @@ $(function() {
   var page = 1;
   loadPlanets();
   function loadPlanets() {
-    var urlPlanets = "http://swapi.co/api/planets/?page=" + page;
-    $.get(urlPlanets, function (data) {
+    var urlPlanets = "https://swapi.co/api/planets/?page=" + page;
+    // using jQuery's $.get():
+    // $.get(urlPlanets, function (data) {
+
+    //using the Fetch API:
+    fetch(urlPlanets).then(function (response) {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error('Network response was not ok.');
+    }).then(function (data) {
       data.results.forEach(function (planet) {
         var removeBtn = $("<button/>", {
           "class": "removeBtn",
