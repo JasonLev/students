@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Shapes</title>
+  <style media="screen">
+    .big-red {
+      width: 90px;
+      height: 90px;
+      background-color: red;
+      margin: 50px;
+      border: green double 70px;
+    }
+    .small-blue {
+      width: 90px;
+      height: 90px;
+      border: double 90px red;
+      background-color: blue;
+    }
+    .large-yellow{
+      width: 90px;
+      height: 90px;
+      border: double 50px green;
+      background-color: yellow
+    }
+    .circle {
+      border-radius: 50%;
+    }
+    .rectangle {
+      width: 200px;
+      height:50px;
+      border: double 5.8em yellow;
+    }
+    .small-green {
+      background-color: green;
+    }
+    .chocolate-star {
+    	width: 0;
+    	height: 0;
+    	border-left: 50px solid transparent;
+    	border-right: 50px solid transparent;
+    	border-bottom: 100px solid red;
+    	position: relative;
+    }
+    .chocolate-star:after {
+    	width: 0;
+    	height: 0;
+    	border-left: 50px solid transparent;
+    	border-right: 50px solid transparent;
+    	border-top: 100px solid chocolate;
+    	position: absolute;
+    	content: "";
+    	top: 30px;
+    	left: -50px;
+    }
+    .trapezoid {
+      border-bottom: 100px solid red;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      height: 0;
+      width: 100px;
+     }
+     .parallelegram {
+       width: 200px;
+       height:50px;
+       border: double 5.8em darkred;
+      background-color: black;
+        -webkit-transform: skew(30deg);
+     }
+  </style>
+</head>
+<body>
+  <h1>poooop $! $1$2$3$5</h1>
+  <h1>Square:</h1>
+  <div class="big-red"></div>
+  <div class="small-blue"></div>
+  <h1>Circle:</h1>
+  <div class="large-yellow circle"></div>
+  <h1>rectangle:</h1>
+  <div class="small-green rectangle"></div>
+  <h1>Chocolate Star:</h1>
+  <div class="chocolate-star"></div>
+  <h1>trapezoid:</h1>
+  <div class="trapezoid"></div>
+  <h1>Parallelegram:</h1>
+  <div class="parallelegram"></div>
+</body>
+</html>
