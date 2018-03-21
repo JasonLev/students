@@ -70,6 +70,8 @@ nav a:first-child {
   border: 2px solid black;
   text-decoration: none;
   background-color: lightgrey;
+  transform: scale(1);
+  transition: all 400ms ease-in-out;
 }
 .card:hover {
   transform: scale(1.25);
