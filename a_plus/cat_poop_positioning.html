@@ -21,13 +21,26 @@
       div.absolute {
         position: absolute;
         top: 50px;
-        left: 50px;
+        right: 50px;
       }
       div.fixed {
         position: fixed;
+        left: 50%;
+        top: 30px;
       }
       div.sticky {
         position: sticky;
+        top: 1px;
+      }
+      #sticky-section {
+        border: solid;
+        overflow: scroll;
+        height: 500px;
+      }
+      .big-box {
+        height: 500px;
+        width: 30%;
+        background-color: red;
       }
     </style>
   </head>
@@ -63,10 +76,11 @@
       <div class="compare">#2</div>
     </section>
     <h1>Sticky Positioning</h1>
-    <section>
+    <section id="sticky-section">
       <div class="compare">#1</div>
       <div class="sticky">Sticky catpoooooop</div>
       <div class="compare">#2</div>
+      <div class="big-box"></div>
     </section>
   </body>
 </html>
