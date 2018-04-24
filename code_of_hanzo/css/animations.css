@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+header {
+  background-color: darkblue;
+}
+header h1 {
+  color: #fff;
+}
+h1 {
+  margin: 0;
+  text-align: center;
+  padding: 1em;
+}
+section {
+  border: 2px solid;
+}
+#transition {
+  background-color: lightgreen;
+}
+#animation {
+  background-color: pink;
+}
+div.box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid;
+  background-color: lightblue;
+  margin: 2em;
+}
+#box1 {
+  transition-duration: 1.5s;
+  transition-timing-function: ease-in;
+  transition-property: all;
+}
+#box1:hover {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+}
