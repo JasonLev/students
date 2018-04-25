@@ -12,13 +12,16 @@ h1 {
   text-align: center;
   padding: 1em;
 }
+h2 {
+  margin-left: 2rem;
+}
 section {
   border: 2px solid;
 }
-#transition {
+#transition-section {
   background-color: lightgreen;
 }
-#animation {
+#animation-section {
   background-color: pink;
 }
 div.box {
@@ -28,6 +31,7 @@ div.box {
   background-color: lightblue;
   margin: 2em;
 }
+/* transition */
 #box1 {
   transition-duration: 1.5s;
   transition-timing-function: ease-in;
@@ -37,4 +41,36 @@ div.box {
   background-color: red;
   height: 200px;
   width: 200px;
+}
+/* animation */
+@keyframes fade-slide {
+  /* from {
+    /* opacity: 1; */
+    /* transform: translateY(0); */
+  /* } */
+  to {
+    opacity: 0.1;
+    transform: translateX(15rem);
+  }
+}
+#box2 {
+  animation: fade-slide 2s infinite alternate;
+}
+@keyframes donut-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#donut {
+  display: inline-block;
+  margin-left: 5rem;
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #7983ff;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  animation: donut-spin 1.5s linear infinite;
 }
