@@ -9,7 +9,7 @@ $(function() {
     if (thisTarget === "#classes") {
       targetOffset = 0;
     }
-    $('body').animate({
+    $('body, html').animate({
       scrollTop: targetOffset
     }, 400);
   });
