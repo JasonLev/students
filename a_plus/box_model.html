@@ -4,8 +4,16 @@
     <meta charset="utf-8">
     <title>Box Model</title>
     <style media="screen">
+    /* section {
+      width: 50%;
+      display: inline-block;
+    } */
     #title {
       font-size: 2.5em;
+    }
+    section h1 {
+      border-bottom: 3px dashed;
+      width: fit-content;
     }
     .box {
       width: 200px;
@@ -16,12 +24,24 @@
     .margin {
       margin: 9px
     }
-  .dotted {
-    border: 3px dotted;
-  }
-  .dashed {
-    border: 3px dashed;
-  }
+    .border-dotted {
+      border: 3px dotted;
+    }
+    .border-dashed {
+      border: 3px dashed;
+    }
+    .border-inset {
+      border: 33px inset;
+    }
+    .border-outset {
+      border: 33px outset;
+    }
+    .border-double {
+      border: 11px double;
+    }
+    .padding {
+      padding: 11px;
+    }
     </style>
   </head>
   <body>
@@ -29,19 +49,20 @@
       <h1 id="title">Box Model Examples</h1>
     </header>
     <section>
-      <h1>two boxes without margin:</h1>
+      <h1>Margin</h1>
+      <h2>two boxes without margin:</h2>
       <div class="box">box1</div>
       <div class="box">box2</div>
-      <h1>first box without margin, second box with margin:</h1>
+      <h2>first box without margin, second box with margin:</h2>
       <div class="box">box1</div>
       <div class="box margin">box2</div>
-      <h1>two boxes with margin:</h1>
+      <h2>two boxes with margin:</h2>
       <div class="box margin">box1</div>
       <div class="box margin">box2</div>
     </section>
     <hr>
     <section>
-      <h1> borders </h1>
+      <h1>Borders </h1>
 <h2>
   solid
 </h2>
@@ -49,13 +70,34 @@
 <h2>
   dotted
 </h2>
-<div class="box dotted">cat pee</div>
+<div class="box border-dotted">cat pee</div>
 <h2>
   dashed
 </h2>
-<div class="box dashed">cat pee</div>
-    </section>
-
+<div class="box border-dashed">cat pee</div>
+<h2>
+double
+</h2>
+<div class="box border-double">cat pee</div>
+<h2>
+inset
+</h2>
+<div class="box border-inset">cat pee</div>
+<h2>
+outset
+</h2>
+<div class="box border-outset">cat pee</div>
+</section>
+<hr>
+<section>
+<h1>Padding</h1>
+<h2>Two boxes without padding</h2>
+<div class="box">box1</div>
+<div class="box">box2</div>
+<h2>Two boxes: first box with padding</h2>
+<div class="box padding">box1</div>
+<div class="box">box2</div>
+</section>
 
 
 
