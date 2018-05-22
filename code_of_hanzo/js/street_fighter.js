@@ -1,5 +1,5 @@
 $(function(){
-  var baseSrcUrl = "https://www.thinkful.com/learn/static/guides/intro-to-jquery/images/";
+  var baseSrcUrl = "../img/street_fighter/";
   $("main > img").hover(function () {
     this.src = baseSrcUrl + 'ryu_animated.gif';
   }, function() {
