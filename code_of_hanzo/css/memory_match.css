@@ -75,3 +75,7 @@ main {
 .card.flipped {
   transform: rotateY(180deg);
 }
+.back img {
+  height: 100%;
+  width: 100%;
+}

@@ -1,19 +1,19 @@
-let collection = ["A",
-                  "A",
-                  "B",
-                  "B",
-                  "C",
-                  "C",
-                  "D",
-                  "D",
-                  "E",
-                  "E",
-                  "F",
-                  "F",
-                  "G",
-                  "G",
-                  "H",
-                  "H"];
+let collection = ["../img/playing_cards/1_diamond.png",
+                  "../img/playing_cards/1_diamond.png",
+                  "../img/playing_cards/2_spade.png",
+                  "../img/playing_cards/2_spade.png",
+                  "../img/playing_cards/4_heart.png",
+                  "../img/playing_cards/4_heart.png",
+                  "../img/playing_cards/7_spade.png",
+                  "../img/playing_cards/7_spade.png",
+                  "../img/playing_cards/9_club.png",
+                  "../img/playing_cards/9_club.png",
+                  "../img/playing_cards/jack_diamond.png",
+                  "../img/playing_cards/jack_diamond.png",
+                  "../img/playing_cards/king_club.png",
+                  "../img/playing_cards/king_club.png",
+                  "../img/playing_cards/queen_diamond.png",
+                  "../img/playing_cards/queen_diamond.png"];
 let matchVal = null;
 let cards = document.querySelectorAll(".card");
 let resetBtn = document.querySelector('button');
@@ -55,19 +55,19 @@ function setupCards() {
   //assign each card a value (after a delay to possibly let card flip to front)
   setTimeout(() => {
     cards.forEach( (card, index) => {
-      card.querySelector(".back span").textContent = collection[index];
+      card.querySelector(".back img").src = collection[index];
     });
   }, 900);
 }
 
 function checkMatch(card) {
-  let content = card.querySelector(".back span").textContent;
-  if (card.classList.contains("flipped") || content === "?????") {
+  let imgPath = card.querySelector(".back img").src;
+  if (card.classList.contains("flipped")) {
     return
   } else if (matchVal === null) {
     card.classList.add("flipped", "open");
-    matchVal = content;
-  } else if (matchVal === content) {
+    matchVal = imgPath;
+  } else if (matchVal === imgPath) {
     card.classList.add("flipped");
     document.querySelector(".open").classList.remove("open");
     matchVal = null;
