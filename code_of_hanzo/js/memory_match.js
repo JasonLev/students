@@ -21,6 +21,7 @@ let timer = document.querySelector('#timer');
 let gameStatus = document.querySelector('#game-status');
 let intervalID;
 let bestScore;
+let victoryImg;
 
 cards.forEach(card => {
   card.addEventListener("click", () => {
@@ -33,6 +34,9 @@ resetBtn.addEventListener("click", startGame);
 function startGame() {
   resetBtn.textContent = "Restart Game";
   clearInterval(intervalID);
+  if (document.querySelector('section img')) {
+    victoryImg.remove();
+  };
   matchVal = null;
   timer.textContent = 0;
   gameStatus.textContent = "";
@@ -86,6 +90,9 @@ function checkMatch(card) {
 function checkGameOver() {
   if (document.querySelectorAll('.flipped').length === collection.length) {
     clearInterval(intervalID);
-    gameStatus.textContent = "Game Over.  Great job!"
+    gameStatus.textContent = "Game Over.  Great job!";
+    victoryImg = document.createElement("img");
+    victoryImg.src = "../img/victory-stewie.jpeg";
+    document.querySelector('section').append(victoryImg);
   }
 }
