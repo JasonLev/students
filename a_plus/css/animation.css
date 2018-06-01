@@ -6,4 +6,13 @@ body {
   height: 65px;
   background-color: black;
   border-radius: 50%;
+  margin: 100px;
+}
+.smalller:hover {
+  transform: scale(.50);
+  transition: all 1s ease-in;
+}
+.biggger:hover {
+  transform: scale(1.50);
+  transition: all 1s ease-in;
 }
