@@ -20,7 +20,7 @@ let resetBtn = document.querySelector('button');
 let timer = document.querySelector('#timer');
 let gameStatus = document.querySelector('#game-status');
 let intervalID;
-let bestScore;
+let bestScoreVal;
 let victoryImg;
 
 cards.forEach(card => {
@@ -90,9 +90,18 @@ function checkMatch(card) {
 function checkGameOver() {
   if (document.querySelectorAll('.flipped').length === collection.length) {
     clearInterval(intervalID);
+    checkFastTime();
     gameStatus.textContent = "Game Over.  Great job!";
     victoryImg = document.createElement("img");
     victoryImg.src = "../img/victory-stewie.jpeg";
-    document.querySelector('section').append(victoryImg);
+    document.querySelector('section').appendChild(victoryImg);
   }
+}
+function checkFastTime() {
+  if (!bestScoreVal) {
+    bestScoreVal = timer.textContent
+  } else if (parseInt(timer.textContent) < parseInt(bestScoreVal)) {
+    bestScoreVal = timer.textContent;
+  }
+  document.querySelector('#fastestTime').textContent = "Fastest Time: " + bestScoreVal;
 }

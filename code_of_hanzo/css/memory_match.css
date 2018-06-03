@@ -18,6 +18,9 @@ section span, section div {
   font-family: monospace;
   font-size: 2rem;
 }
+#fastestTime{
+  border: 2px solid;
+}
 main {
   width: 600px;
   max-width: 800px;
