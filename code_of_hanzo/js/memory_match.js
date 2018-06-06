@@ -88,7 +88,8 @@ function checkMatch(card) {
   }
 }
 function checkGameOver() {
-  if (document.querySelectorAll('.flipped').length === collection.length) {
+  if (document.querySelectorAll('.flipped').length === collection.length
+      && parseInt(timer.textContent)) {
     clearInterval(intervalID);
     checkFastTime();
     gameStatus.textContent = "Game Over.  Great job!";
