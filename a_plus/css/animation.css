@@ -32,7 +32,7 @@ body {
   border-radius: 50%;
   transition: all 1s ease-in;
 }
-.triangle{
+.triangle, .triangle-animate{
   width: 0;
   height: 0;
   background-color: black;
@@ -47,15 +47,55 @@ body {
   border-right: 57.5px solid;
   transition: all 1s ease-in;
 }
-.square-animate {
-  animation-name: squares;
+.animation {
   animation-timing-function: ease-in-out;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+.square-animate {
+  animation-name: squares;
+}
+.triangle-animate{
+  animation-name: triangle;
+}
+.circle-animate{
+  animation-name: circle;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.animation-series{
+
+}
+#second{
+  animation-delay: 4s;
+}
+#third{
+  /* animation-delay: 1s; */
+}
 @keyframes squares {
   100%{
     border-radius: 50%;
+  }
+}
+@keyframes triangle {
+  100% {
+    border-left: 57.5px solid;
+    border-right: 57.5px solid;
+  }
+}
+@keyframes circle {
+  25% {
+    transform: scale(1.50);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.50);
+  }
+  100% {
+    transform: scale(1);
   }
 }
