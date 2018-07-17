@@ -65,14 +65,14 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-.animation-series{
 
-}
 #second{
-  animation-delay: 4s;
+  animation-name: paused-circle;
+  animation-duration: 12s;
 }
 #third{
-  /* animation-delay: 1s; */
+  animation-name: circle-paused;
+  animation-duration: 12s;
 }
 @keyframes squares {
   100%{
@@ -93,6 +93,52 @@ body {
     transform: scale(1);
   }
   75% {
+    transform: scale(0.50);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes paused-circle {
+  33.3333% {
+    transform: scale(1);
+  }
+  41.66666% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  58.3333% {
+    transform: scale(0.50);
+  }
+  66.6666% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  83.3333% {
+    transform: scale(1);
+  }
+  91.6666% {
+    transform: scale(0.50);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes circle-paused {
+  66.6666% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  83.3333% {
+    transform: scale(1);
+  }
+  91.6666% {
     transform: scale(0.50);
   }
   100% {
